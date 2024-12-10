@@ -1,21 +1,66 @@
 return {
+  -- {
+  --   "folke/tokyonight.nvim",
+  --   priority = 1000, -- Ensure this loads first
+  --   config = function()
+  --     require("tokyonight").setup({
+  --       style = "night", -- Default style
+  --       transparent = true, -- Enable transparency
+  --       styles = {
+  --         sidebars = "transparent", -- Transparent sidebars
+  --         floats = "transparent", -- Transparent floating windows
+  --       },
+  --     })
+  --     -- Set Tokyonight as the default colorscheme
+  --     vim.cmd([[colorscheme tokyonight]])
+  --   end,
+  -- },
   {
-    "folke/tokyonight.nvim",
-    priority = 1000, -- Make sure to load this before other start plugins
+    "EdenEast/nightfox.nvim", -- Nightfox theme
+    priority = 1000,
     config = function()
-      require("tokyonight").setup({
-        style = "night", -- Default style
-        transparent = true, -- Enable transparency
-        styles = {
-          sidebars = "transparent", -- Transparent sidebars
-          floats = "transparent", -- Transparent floating windows
+      require("nightfox").setup({
+        options = {
+          -- transparent = true, -- Enable transparency
+          styles = {
+            comments = "italic",
+            keywords = "bold",
+            functions = "italic,bold",
+          },
         },
-        on_colors = function(colors)
-          -- Optional: Customize colors if needed
-        end,
       })
-      -- Load the colorscheme
-      vim.cmd([[colorscheme tokyonight]])
+      -- Uncomment to set Nordfox as default
+      vim.cmd([[colorscheme nordfox]])
     end,
   },
+  -- {
+  --   "catppuccin/nvim", -- Catppuccin theme
+  --   name = "catppuccin",
+  --   priority = 1000,
+  --   config = function()
+  --     require("catppuccin").setup({
+  --       transparent_background = true, -- Enable transparency
+  --       flavour = "mocha", -- Choose your preferred flavor: latte, frappe, macchiato, mocha
+  --       styles = {
+  --         comments = { "italic" },
+  --         functions = { "bold" },
+  --         keywords = { "italic", "bold" },
+  --       },
+  --       integrations = {
+  --         treesitter = true,
+  --         native_lsp = {
+  --           enabled = true,
+  --           virtual_text = {
+  --             errors = { "italic" },
+  --             hints = { "italic" },
+  --             warnings = { "italic" },
+  --             information = { "italic" },
+  --           },
+  --         },
+  --       },
+  --     })
+  --     -- Uncomment to set Catppuccin as default
+  --     vim.cmd([[colorscheme catppuccin]])
+  --   end,
+  -- },
 }

@@ -5,9 +5,9 @@ dimensions = { columns = 85, lines = 26 }
 
 [font]
 # Font family and style
-normal = { family = "SF Mono", style = "Heavy" }
+normal = { family = "MesloLGS NF", style = "Regular" }
 # Font size
-size = 11.0
+size = 13.0
 
 # Enable anti-aliasing for better  font rendering
 

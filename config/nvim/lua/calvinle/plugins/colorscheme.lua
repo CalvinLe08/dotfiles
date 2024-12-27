@@ -5,7 +5,7 @@ return {
   --   config = function()
   --     require("tokyonight").setup({
   --       style = "night", -- Default style
-  --       transparent = true, -- Enable transparency
+  --       transparent = false, -- Enable transparency
   --       styles = {
   --         sidebars = "transparent", -- Transparent sidebars
   --         floats = "transparent", -- Transparent floating windows

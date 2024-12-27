@@ -1,0 +1,20 @@
+window-height = 23
+window-width = 81
+
+window-theme=auto
+window-padding-x = 2,4
+window-padding-y = 4
+window-padding-balance
+
+macos-icon = custom-style
+macos-titlebar-style = native
+macos-titlebar-proxy-icon = hidden
+macos-icon = official
+
+cursor-style-blink = false
+
+working-directory = home
+
+theme = dark:catppuccin-mocha,light:BlulocoLight
+
+

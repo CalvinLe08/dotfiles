@@ -34,3 +34,4 @@ opt.splitbelow = true
 
 
 
+opt.guicursor = "n-v-c-sm:block"

@@ -11,10 +11,17 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 # All my favorite ZSH Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME="agnoster"
-# ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
+# ZSH_THEME="simple"
+# ZSH_THEME="apple"
 
+# Default prompt
+PS1='calvin@MBP %1~ %# '
+
+
+# Plugins
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search tmux)
 
 source $ZSH/oh-my-zsh.sh
@@ -53,7 +60,7 @@ fi
 export JAVA_HOME=/opt/homebrew/Cellar/openjdk@17/17.0.12/libexec/openjdk.jdk/Contents/Home
 export PATH="/opt/homebrew/opt/mysql/bin:$PATH"
 
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

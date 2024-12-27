@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set up dotfiles repository URL (replace with your repository URL)
-DOTFILES_REPO="https://github.com/your-username/dotfiles.git"
+DOTFILES_REPO="https://github.com/CalvinLe08/dotfiles.git"
 DOTFILES_DIR="$HOME/dotfiles"
 
 # Clone the dotfiles repository if it doesn't exist
@@ -93,4 +93,45 @@ if ! grep -q "starship init zsh" "$HOME/.zshrc"; then
   echo 'eval "$(starship init zsh)"' >> "$HOME/.zshrc"
 fi
 
+# Install zsh-syntax-highlighting
+if [ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]; then
+  echo "Installing zsh-syntax-highlighting..."
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+else
+  echo "zsh-syntax-highlighting is already installed."
+fi
+
+# Install zsh-autosuggestions
+if [ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
+  echo "Installing zsh-autosuggestions..."
+  git clone https://github.com/zsh-users/zsh-autosuggestions.git "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+else
+  echo "zsh-autosuggestions is already installed."
+fi
+
+# Install zsh-web-search
+if [ ! -d "$HOME/.oh-my-zsh/custom/plugins/web-search" ]; then
+  echo "Installing zsh-web-search..."
+  git clone https://github.com/svenja-z/zsh-web-search.git "$HOME/.oh-my-zsh/custom/plugins/web-search"
+else
+  echo "zsh-web-search is already installed."
+fi
+
+# Add plugins to .zshrc if not already added
+if ! grep -q "plugins=(.*zsh-syntax-highlighting.*)" "$HOME/.zshrc"; then
+  echo "Adding zsh-syntax-highlighting to .zshrc..."
+  sed -i '' 's/plugins=(/plugins=(zsh-syntax-highlighting /' "$HOME/.zshrc"
+fi
+
+if ! grep -q "plugins=(.*zsh-autosuggestions.*)" "$HOME/.zshrc"; then
+  echo "Adding zsh-autosuggestions to .zshrc..."
+  sed -i '' 's/plugins=(/plugins=(zsh-autosuggestions /' "$HOME/.zshrc"
+fi
+
+if ! grep -q "plugins=(.*web-search.*)" "$HOME/.zshrc"; then
+  echo "Adding web-search to .zshrc..."
+  sed -i '' 's/plugins=(/plugins=(web-search /' "$HOME/.zshrc"
+fi
+
 echo "macOS setup complete!"
+

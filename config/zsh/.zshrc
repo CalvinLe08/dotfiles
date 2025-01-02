@@ -60,6 +60,10 @@ function lsPretty() {
 	eza  --icons --hyperlink --time-style relative $1
 }
 
+function llPretty() {
+	eza -l -a --icons --hyperlink --time-style relative $1
+}
+
 export JAVA_HOME=/opt/homebrew/Cellar/openjdk@17/17.0.12/libexec/openjdk.jdk/Contents/Home
 export PATH="/opt/homebrew/opt/mysql/bin:$PATH"
 

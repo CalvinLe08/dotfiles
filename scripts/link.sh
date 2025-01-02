@@ -16,6 +16,7 @@ ln -svnf $CONFIG_DIR/alacritty ~/.config/alacritty
 ln -svnf $CONFIG_DIR/nvim ~/.config/nvim
 ln -svnf $CONFIG_DIR/starship ~/.config/starship
 ln -svnf $CONFIG_DIR/ghostty ~/.config/ghostty
+ln -svnf $CONFIG_DIR/fastfetch ~/.config/fastfetch
 
 # Additional symlinks for specific files
 ln -svnf $CONFIG_DIR/zsh/.zshrc ~/.zshrc

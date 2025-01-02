@@ -22,3 +22,7 @@ font-size = 12
 font-thicken = true
 
 font-feature = -calt -dlig -liga
+
+window-step-resize = true
+resize-overlay = always
+

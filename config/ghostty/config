@@ -1,20 +1,24 @@
-window-height = 23
-window-width = 81
+window-height = 20
+window-width = 75
 
 window-theme=auto
-window-padding-x = 2,4
-window-padding-y = 4
 window-padding-balance
 
-macos-icon = custom-style
 macos-titlebar-style = native
 macos-titlebar-proxy-icon = hidden
 macos-icon = official
 
 cursor-style-blink = false
+cursor-color = #2BFFB8
+mouse-hide-while-typing
 
 working-directory = home
 
-theme = dark:catppuccin-mocha,light:BlulocoLight
+theme = cyberdream
 
+font-family = Berkeley Mono
+font-style = Regular
+font-size = 12
+font-thicken = true
 
+font-feature = -calt -dlig -liga

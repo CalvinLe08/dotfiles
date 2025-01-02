@@ -55,6 +55,10 @@ if [ -f ~/.vscode-zshrc ]; then
   source ~/.vscode-zshrc
 fi
 
+# Functions
+function lsPretty() {
+	eza  --icons --hyperlink --time-style relative $1
+}
 
 export JAVA_HOME=/opt/homebrew/Cellar/openjdk@17/17.0.12/libexec/openjdk.jdk/Contents/Home
 export PATH="/opt/homebrew/opt/mysql/bin:$PATH"
